@@ -1,0 +1,6 @@
+hi
+hello, how are you?
+This is test for Django text file uploading
+successfully done...!!!
+
+puja kature

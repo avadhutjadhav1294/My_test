@@ -1,0 +1,11 @@
+Name,Quantity,Price,Authour,Is_Published
+Book101,10,100,Author1,TRUE
+Book102,16,201,Author2,TRUE
+book103,22,302,author3,FALSE
+Book104,28,403,author4,TRUE
+Book105,34,504,author5,FALSE
+Book106,40,605,author6,TRUE
+Book107,46,706,author7,TRUE
+Book108,52,807,author8,TRUE
+Book109,58,908,author9,TRUE
+Book110,54,1009,author11,FALSE

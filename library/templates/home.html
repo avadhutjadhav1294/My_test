@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+  <h2 class="card-title">Welcome to Avadhut's Library</h2>
+  <p class="card-text">Enter the data for books here</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" value="Submit" class="btn btn-primary btn-sm">
+  </form>
+
+{% endblock %}

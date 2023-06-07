@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+<!-- {% load crispy_forms_tags %} -->
+
+
+{% block content %}
+  <h2 class="card-title">Data for requested books</h2>
+  {% if all_books %}
+  <table class="table table-dark table-striped">
+      <tr>    
+          <th>Book ID</th>
+          <th>Book Name</th>
+          <th>Book Qty</th>
+          <th>Book Price</th>
+          <th>Book Author</th>
+          <th>Book Published</th>
+          <th>Actions</th>
+      </tr>
+      {% for book in all_books %}
+          <tr>
+              <td>{{book.id}}</td>
+              <td>{{book.name}}</td>
+              <td>{{book.qty}}</td>
+              <td>{{book.price}}</td>
+              <td>{{book.author}}</td>
+              <td>{{book.is_published}}</td>
+              <td>
+                {% if active %}
+                    <form action="{% url 'update_book' book.id %}" method="get">
+                        <input type="submit" class="btn btn-success btn-sm" value="Update" >
+                    </form>
+                    <form action="{% url 'hard_delete' book.id %}" method="get">
+                        <input type="submit" class="btn btn-danger btn-sm" value="Hard-Delete" >
+                    </form>
+                    <form action="{% url 'soft_delete' book.id %}" method="get">
+                        <input type="submit" class="btn btn-warning btn-sm" value="Soft-Delete" >
+                    </form>
+                {%endif%}
+                {% if inactive %}
+                <form action="{% url 'restore_book' book.id %}" method="get">
+                    <input type="submit" class="btn btn-success btn-sm" value="Restore" >
+                </form>
+                <form action="{% url 'hard_delete' book.id %}" method="get">
+                    <input type="submit" class="btn btn-danger btn-sm" value="Hard-Delete" >
+                </form>
+                {%endif%}
+              </td>
+          </tr> 
+      {% endfor %}
+     
+  </table><br>
+  {% else %}
+  <h2>No Records Found</h2>
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+name,qty,price,author,is_published
+Book1011,10,100,Author1,TRUE
+Book1012,516,412,Author2,TRUE
+Book1013,1022,724,author3,FALSE
+Book1014,1528,1036,author4,TRUE
+Book1051,2034,1348,author5,FALSE
+Book1016,2540,1660,author6,TRUE
+Book1017,3046,1972,author7,TRUE
+Book1081,3552,2284,author8,TRUE
+Book1091,4058,2596,author9,TRUE
+Book1101,4564,875,author11,FALSE

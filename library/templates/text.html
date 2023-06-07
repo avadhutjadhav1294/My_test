@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+  <h2 class="card-title">Welcome to Avadhut's Library</h2>
+  <p class="card-text">Data for text file uoloaded is here</p> <hr>
+  {%for line in data%}
+    {{line}} <br><br>
+  {%endfor%}
+
+
+{% endblock %}
